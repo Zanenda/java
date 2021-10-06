@@ -1,10 +1,8 @@
 package Java2.Uždaviniai;
 
-//• Įvedate 3 skaičius ir atspausdinti didžiausią
-
 import java.util.Scanner;
 
-public class DidziausiasIsTriju {
+public class ArYraNeigiamu {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         System.out.println("Iveskite pirma skaiciu");
@@ -15,12 +13,10 @@ public class DidziausiasIsTriju {
         double trecias = reader.nextDouble();
         reader.close();
 
-        if(pirmas > antras && pirmas > trecias) {
-            System.out.println("Pirmas skaicius didziausias");
-        } else if (antras > pirmas && antras > trecias) {
-            System.out.println("Antras skaicius didziausias");
+        if(pirmas < 0 || antras < 0 || trecias < 0) {
+            System.out.println("Yra neigiamu skaiciu");
         } else {
-            System.out.println("Trecias skaicius didziausias");
+            System.out.println("Nera neigiamu skaiciu");
         }
     }
 }
