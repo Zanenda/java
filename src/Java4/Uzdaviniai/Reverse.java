@@ -1,9 +1,6 @@
 package Java4.Uzdaviniai;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 
 public class Reverse {
@@ -38,6 +35,18 @@ public class Reverse {
         } catch (IOException e) {
             System.out.println();
         }
+
+
+
+//        try {
+//            bw = BufferedReader(new FileWriter("src/java4/uzduotys/atsakymai.txt"));
+//            bw.write("Nuskaityti duomenys:");
+//            bw.newLine();
+//
+//           for(int i = 0; i < array.length; i++) {
+//                bw.write(array[1]);
+//            }
+//        }
 
     }
 
