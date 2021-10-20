@@ -1,8 +1,15 @@
-package java1;
+package Java1;
+
+import Java7.Const;
+import Java7.Human;
 
 public class HelloWorld {
+
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+//        TODO: Pakeisti kazka
+        System.out.println("Hello, World!"); // Comment
+        /**/
+        Human zmogus = new Human();
+        zmogus.getName();
     }
 }
-

@@ -1,22 +1,18 @@
 package java3;
 
-public class switchSakinys {
-
+public class SwitchSakinys {
     public static void main(String[] args) {
-        int skaicius = 3;
+        int skaicius = 2;
 
-        switch (skaicius) {
-            case 1:
-                System.out.println("vienetas");
+        switch(skaicius) {
+            case 1: // skaicius == 1
+                System.out.println("Vienetas");
                 break;
-            case 2:
-                System.out.println("dvejetas");
+            case 2: // skaicius == 2
+                System.out.println("Dvejetas");
                 break;
-            case 3:
-                System.out.println("trejetas");
-                break;
-            case 4:
-                System.out.println("ketvertas");
+            case 3: // skaicius == 3
+                System.out.println("Trejetas");
                 break;
             default:
                 System.out.println("Nera tokio skaiciaus");
