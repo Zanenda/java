@@ -6,18 +6,19 @@ public class Mokinys {
     private String klase;
     private int[] pazymiuMasyvas;
 
-    public Mokinys() {
-
-    }
-
-    public Mokinys(String vardas, String pavarde, String klase, int[]pazymiuMasyvas) {
+    public Mokinys(String vardas, String pavarde, String klase, int[] pazymiuMasyvas) {
         this.vardas = vardas;
         this.pavarde = pavarde;
         this.klase = klase;
         this.pazymiuMasyvas = pazymiuMasyvas;
     }
-
-    // GET SET VARDAS
+    // Rugsejo 1 konstruktorius
+    public Mokinys(String vardas, String pavarde, String klase) {
+        this.vardas = vardas;
+        this.pavarde = pavarde;
+        this.klase =klase;
+        this.pazymiuMasyvas = new int[0];
+    }
 
     public String getVardas() {
         return vardas;
@@ -27,9 +28,6 @@ public class Mokinys {
         this.vardas = vardas;
     }
 
-    ///////////////////
-    // GET SET PAVARDE
-
     public String getPavarde() {
         return pavarde;
     }
@@ -38,9 +36,6 @@ public class Mokinys {
         this.pavarde = pavarde;
     }
 
-    ///////////////////
-    // GET SET KLASE
-
     public String getKlase() {
         return klase;
     }
@@ -48,9 +43,6 @@ public class Mokinys {
     public void setKlase(String klase) {
         this.klase = klase;
     }
-
-    ///////////////////
-    // GET SET PAZYMIUMASYVAS
 
     public int[] getPazymiuMasyvas() {
         return pazymiuMasyvas;
@@ -62,17 +54,26 @@ public class Mokinys {
 
     public String toString() {
         return "Vardas: " + vardas + " Pavarde: " + pavarde + " Klase: " + klase
-                + " Pazymiu masyvas: " + pazymiuMasyvas; // 4 6 10 8
+                + " Pazymiu masyvas: " + pazymiuEilute() + " Vidurkis: " + vidurkis(); // 4 6 10 8
     }
 
     private String pazymiuEilute() {
         String tekstas = "";
-        for(int i = 0; i < pazymiuMasyvas.length; i++) {
+        // for(int pazymys: pazymiuMasyvas) {
+        //
+        // }
+        for (int i = 0; i < pazymiuMasyvas.length; i++) {
             tekstas = tekstas + pazymiuMasyvas[i] + " ";
         }
         return tekstas;
     }
 
-
-
+    public double vidurkis() {
+        int sum = 0;
+        for(int i = 0; i < pazymiuMasyvas.length; i++) {
+            sum = sum + pazymiuMasyvas[i];
+        }
+        Double vidurkis = 1.0 * sum / pazymiuMasyvas.length;
+        return vidurkis;
+    }
 }
